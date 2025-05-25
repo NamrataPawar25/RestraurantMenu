@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  background-color: rgb(9, 104, 121);
+  padding: 20px;
+  height: fit-content;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.card {
+  width: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.fruits .header {
+  background: linear-gradient(to right, #a8e063, #56ab2f);
+}
+
+.vegetables .header {
+  background: linear-gradient(to right, #9d50bb, #6e48aa);
+}
+
+.groceries .header {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+}
+
+.list {
+  background: white;
+  padding: 10px 0px;
+  padding-top: 20px;
+  list-style-position: inside;
+}
+
+.fruits .list {
+  list-style-type: decimal;
+}
+
+.vegetables .list {
+  list-style-type: square;
+}
+
+.groceries .list {
+  list-style-type: circle;
+}
+
+.list li {
+  background-color: rgb(247, 238, 238);
+  padding: 10px !important;
+}
+
+
+/* Indented nested lists use default circle or none */
+ul {
+  list-style-type: circle;
+}
+
+ul ul {
+  list-style-type: square;
+  margin-left: 0;
+}
+
+.links ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.links li {
+  margin: 5px 40px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* table */
+.table{
+  justify-content: center;
+  display: flex;
+}
+.table table,
+.table table th,
+.table table td {
+  border: 2px solid black;
+  padding: 5px;
+}
+
+.table table th {
+  background-color: skyblue;
+}
+
+.table table table th {
+  background-color: rgb(243, 175, 49);
+}
+.table table th, td{
+  font-size: xx-large;
+}
+
+
+.plans table{
+  border: 2px solid black;
+  margin: 50px auto;
+}
+.plans table td{
+  font-size: medium;
+  padding: 10px 20px;
+  text-align: center;
+}
+.plans table p{
+  font-size: xx-large;
+}
+.plans th{
+  text-align: center;
+  padding: 20px 0;
+}
+.plans sub, .plans sup{
+  color: gray;
+  font-size: medium;
+}
+.plans .popular, .popular sub, .popular sup{
+  color: red;
+}
+.select-btn{
+ text-align: center;
+  padding: 5px 20px;
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+  border: 0;
+}
+.red-btn{
+  background-color: red;
+  border: 0;
+}

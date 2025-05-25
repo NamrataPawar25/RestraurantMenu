@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Indian Restaurant Menu & Reservations</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #fffaf4;
+    }
+
+    h1, h2 {
+      color: #8b0000;
+      text-align: center;
+    }
+
+    /* MENU STYLING */
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px auto;
+      max-width: 1000px;
+    }
+
+    .menu ul, .menu ol {
+      list-style-position: inside;
+      padding: 20px;
+      background: #fff;
+      border: 2px solid #ffdbb4;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .menu h3 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #b22222;
+    }
+
+    .menu li {
+      padding: 8px 0;
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .price {
+      color: #8b0000;
+      font-weight: bold;
+    }
+
+    /* RESERVATION TABLE STYLING */
+    table {
+      width: 100%;
+      max-width: 900px;
+      margin: 40px auto;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background-color: #fff0e1;
+      color: #a52a2a;
+    }
+
+    .reserved {
+      background-color: #ffe5e5;
+      color: #d10000;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .menu {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      td {
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🍛 Swadisht Indian Restro</h1>
+  <h2>Our Indian Menu</h2>
+
+  <!-- Indian Menu -->
+  <div class="menu">
+    <ul>
+      <h3>Starters</h3>
+      <li>Samosa (2 pcs) <span class="price">₹50</span></li>
+      <li>Paneer Tikka <span class="price">₹180</span></li>
+      <li>Veg Manchurian <span class="price">₹150</span></li>
+      <li>Aloo Chaat <span class="price">₹90</span></li>
+    </ul>
+
+    <ol>
+      <h3>Main Course</h3>
+      <li>Butter Chicken <span class="price">₹270</span></li>
+      <li>Paneer Butter Masala <span class="price">₹240</span></li>
+      <li>Chicken Biryani <span class="price">₹220</span></li>
+      <li>Veg Thali <span class="price">₹200</span></li>
+      <li>Dal Tadka <span class="price">₹140</span></li>
+    </ol>
+
+    <ul>
+      <h3>Breads & Rice</h3>
+      <li>Plain Naan <span class="price">₹30</span></li>
+      <li>Butter Naan <span class="price">₹40</span></li>
+      <li>Jeera Rice <span class="price">₹90</span></li>
+      <li>Steamed Rice <span class="price">₹70</span></li>
+    </ul>
+
+    <ol>
+      <h3>Desserts & Beverages</h3>
+      <li>Gulab Jamun <span class="price">₹60</span></li>
+      <li>Rasgulla <span class="price">₹55</span></li>
+      <li>Masala Chai <span class="price">₹25</span></li>
+      <li>Sweet Lassi <span class="price">₹40</span></li>
+      <li>Cold Coffee <span class="price">₹60</span></li>
+    </ol>
+  </div>
+
+  <!-- Reservation Table -->
+  <h2>Reservation Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Table #</th>
+        <th>Time</th>
+        <th>Name</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Table #">1</td>
+        <td data-label="Time">6:00 PM</td>
+        <td data-label="Name">Ravi Kumar</td>
+        <td data-label="Status" class="reserved">Reserved</td>
+      </tr>
+      <tr>
+        <td data-label="Table #">2</td>
+        <td data-label="Time">6:30 PM</td>
+        <td data-label="Name">—</td>
+        <td data-label="Status">Available</td>
+      </tr>
+      <tr>
+        <td data-label="Table #">3</td>
+        <td data-label="Time">7:00 PM</td>
+        <td data-label="Name">Anita Sharma</td>
+        <td data-label="Status" class="reserved">Reserved</td>
+      </tr>
+      <tr>
+        <td data-label="Table #">4</td>
+        <td data-label="Time">7:30 PM</td>
+        <td data-label="Name">—</td>
+        <td data-label="Status">Available</td>
+      </tr>
+      <tr>
+        <td data-label="Table #">5</td>
+        <td data-label="Time">8:00 PM</td>
+        <td data-label="Name">Vikram Patel</td>
+        <td data-label="Status" class="reserved">Reserved</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
